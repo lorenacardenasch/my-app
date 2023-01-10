@@ -5,8 +5,11 @@ import Axios from 'axios';
 import { useEffect } from 'react';
 
 const HomeBody = () => {
+
   const [itemsCategoria, setItemCategoria] = useState("");
   const [itemsCuentaCategoria, setItemCuentaCategoria] = useState("");
+
+
   useEffect(()=> {
     const getItemsCategoria = async ()=>{
       const url = 'http://localhost:3001/consultaCategorias';
@@ -16,8 +19,11 @@ const HomeBody = () => {
     }
     getItemsCategoria()
   },[]);
+
   const [itemsProducto, setItemProducto] = useState("");
   const [itemsCuentaProducto, setItemCuentaProducto] = useState("");
+
+
   useEffect(()=> {
     const getItemsProducto = async ()=>{
       const url = 'http://localhost:3001/consultaProductos';
@@ -27,8 +33,11 @@ const HomeBody = () => {
     }
     getItemsProducto()
   },[]);
+
   const [itemsUsuario, setItemUsuario] = useState("");
   const [itemsCuentaUsuario, setItemCuentaUsuario] = useState("");
+
+
   useEffect(()=> {
     const getItemsUsuario = async ()=>{
       const url = 'http://localhost:3001/user/consultaUsuarios';
@@ -145,34 +154,19 @@ const HomeBody = () => {
               </div>
               <div className="card-body">
                 <div className="row">
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-info text-white shadow">
-                      <div className="card-body">
-                      Categoria 01
+              {itemsCategoria.map((itemCategorias)=>{
+                    return(
+
+                      <div className="col-lg-6 mb-4">
+                        <div className="card bg-info text-white shadow">
+                          <div className="card-body">
+                           {itemCategorias}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-info text-white shadow">
-                      <div className="card-body">
-                        Category 02
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-info text-white shadow">
-                      <div className="card-body">
-                        Category 03
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-info text-white shadow">
-                      <div className="card-body">
-                        Category 04
-                      </div>
-                    </div>
-                  </div>
+
+                    )
+                })}
                 </div>
               </div>
             </div>
