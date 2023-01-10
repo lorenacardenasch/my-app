@@ -74,7 +74,7 @@ body {
   line-height: 1.5;
   color: #858796;
   text-align: left;
-  background-color: black;
+  background-color: #fff;
 }
 [tabindex="-1"]:focus {
   outline: 0 !important;
@@ -431,7 +431,7 @@ mark {
 .blockquote-footer {
   display: block;
   font-size: 80%;
-  color: white;
+  color: #858796;
 }
 .blockquote-footer::before {
   content: "\2014\00A0";
@@ -4036,15 +4036,11 @@ input[type="submit"].btn-block {
 }
 .card-footer {
   padding: 0.75rem 1.25rem;
-  background-color: black;
+  background-color: #f8f9fc;
   border-top: 1px solid #e3e6f0;
 }
 .card-footer:last-child {
   border-radius: 0 0 calc(0.35rem - 1px) calc(0.35rem - 1px);
-  -webkit-border-radius: 0 0 calc(0.35rem - 1px) calc(0.35rem - 1px);
-  -moz-border-radius: 0 0 calc(0.35rem - 1px) calc(0.35rem - 1px);
-  -ms-border-radius: 0 0 calc(0.35rem - 1px) calc(0.35rem - 1px);
-  -o-border-radius: 0 0 calc(0.35rem - 1px) calc(0.35rem - 1px);
 }
 .card-header-tabs {
   margin-right: -0.625rem;
@@ -8741,7 +8737,7 @@ a:focus {
   display: flex;
 }
 #wrapper #content-wrapper {
-  background-color:black;
+  background-color: #f8f9fc;
   width: 100%;
   overflow-x: hidden;
 }
